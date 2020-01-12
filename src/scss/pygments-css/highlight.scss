@@ -1,14 +1,13 @@
-$leftSpace: 100px;
+$x-padding: 100px;
 
 .highlight {
   display: inline-block;
-  padding: 20px;
-  padding-left: $leftSpace;
+  padding: 20px $x-padding;
   // border-bottom-left-radius: 80px;
   // border-top-right-radius: 80px;
   // border-top-left-radius: 40px;
   // border-bottom-right-radius: 40px;
-  border-radius: 10px $leftSpace 10px  $leftSpace;
+  border-radius: 10px $x-padding 10px  $x-padding;
 }
 
 $hightlightTheme: "autumn";
