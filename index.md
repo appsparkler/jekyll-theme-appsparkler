@@ -1,5 +1,8 @@
 ---
-layout: default
+layout: home
+title: Appsparkler Home
 ---
 
-Hello World...
+## Welcome to the home page.
+
+Appsparkler is under construction.

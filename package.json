@@ -1,0 +1,12 @@
+{
+  "name": "appsparkler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Akash <subs@appsparkler.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "bundle exec jekyll serve --livereload --watch",
+    "build": "gem build appsparkler",
+    "push": "gem push appsparkler-*.gem; rm -rf appsparkler-*.gem"
+  }
+}
