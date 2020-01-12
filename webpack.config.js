@@ -1,14 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-
 module.exports = {
     mode: 'production',
     entry: './src/index.js',
     output: {
-      path: __dirname + '/assets/js',
+      path: __dirname + '/js',
       filename: '[name].[contenthash:8].js',
       publicPath: '/assets/js'
-
     },
     plugins: [
       new CleanWebpackPlugin({
