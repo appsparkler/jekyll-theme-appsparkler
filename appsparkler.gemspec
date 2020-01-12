@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "appsparkler"
-  spec.version       = "0.1.0"
+  spec.version       = "0.4.0"
   spec.authors       = ["Akash"]
   spec.email         = ["subs@appsparkler.com"]
 
