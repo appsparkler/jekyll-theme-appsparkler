@@ -1,2 +1,1 @@
-
-import 'materialize-css/sass/materialize'
+import '@styles/main'

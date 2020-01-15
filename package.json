@@ -7,7 +7,7 @@
   "scripts": {
     "start": "bundle exec jekyll serve --livereload --watch",
     "build:gem": "gem build appsparkler",
-    "webpack": "webpack-dashboard -- webpack",
+    "webpack": "webpack",
     "push": "gem push appsparkler-*.gem; rm -rf appsparkler-*.gem"
   },
   "devDependencies": {
