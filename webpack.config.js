@@ -40,7 +40,7 @@ module.exports = {
       // chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
     }),
     new HTMLPlugin({
-      template: resolve('src/index.ejs'),
+      template: resolve('src/ejs/link-tags.ejs'),
       filename: '../_includes/headlibs.html',
       inject: false,
       templateParameters: (compilation, assets, assetTags, options) => {
@@ -53,11 +53,28 @@ module.exports = {
             files: assets,
             options,
           },
-          'cssSrc': assets.css[0],
+          'cssHref': assets.css[0],
         }
       },
     }),
-    // new DashboardPlugin(),
+    new HTMLPlugin({
+      template: resolve('src/ejs/script-tags.ejs'),
+      filename: '../_includes/footlibs.html',
+      inject: false,
+      templateParameters: (compilation, assets, assetTags, options) => {
+        console.log(assets.css[0])
+        return {
+          compilation,
+          'webpackConfig': compilation.options,
+          'htmlWebpackPlugin': {
+            tags: assetTags,
+            files: assets,
+            options,
+          },
+          'jsSrc': assets.js[0],
+        }
+      },
+    }),
   ],
 }
 
