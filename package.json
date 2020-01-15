@@ -8,5 +8,17 @@
     "start": "bundle exec jekyll serve --livereload --watch",
     "build": "gem build appsparkler",
     "push": "gem push appsparkler-*.gem; rm -rf appsparkler-*.gem"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dashboard": "^3.2.0"
+  },
+  "dependencies": {
+    "materialize-css": "^1.0.0-rc.2"
   }
 }
