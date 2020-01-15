@@ -44,15 +44,7 @@ module.exports = {
       filename: '../_includes/headlibs.html',
       inject: false,
       templateParameters: (compilation, assets, assetTags, options) => {
-        console.log(assets.css[0])
         return {
-          compilation,
-          'webpackConfig': compilation.options,
-          'htmlWebpackPlugin': {
-            tags: assetTags,
-            files: assets,
-            options,
-          },
           'cssHref': assets.css[0],
         }
       },
@@ -62,36 +54,10 @@ module.exports = {
       filename: '../_includes/footlibs.html',
       inject: false,
       templateParameters: (compilation, assets, assetTags, options) => {
-        console.log(assets.css[0])
         return {
-          compilation,
-          'webpackConfig': compilation.options,
-          'htmlWebpackPlugin': {
-            tags: assetTags,
-            files: assets,
-            options,
-          },
           'jsSrc': assets.js[0],
         }
       },
     }),
   ],
 }
-
-// new HtmlWebpackPlugin({
-//       // NOTE if you pass plain object it will be passed as is. no default values there, so be aware!
-//       // for implementation detail, please see index.js and search for "userOptions" variable
-//       templateParameters: (compilation, assets, assetTags, options) => {
-//         return {
-//           compilation,
-//           webpackConfig: compilation.options,
-//           htmlWebpackPlugin: {
-//             tags: assetTags,
-//             files: assets,
-//             options
-//           },
-//           'foo': 'bar'
-//         };
-//       },
-//       template: 'index.ejs'
-//     })
