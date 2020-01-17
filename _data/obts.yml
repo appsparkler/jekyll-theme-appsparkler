@@ -1,0 +1,15 @@
+- id: OBTs
+  description: A collection of OBTs
+  obts:
+  - layout: OBT
+    date: 2020-01-19
+    obt: Spirituality is all about simplifying your life and focusing on the essentials.
+    by: Daaji
+    question: What is spirituality all about?
+    color: indigo
+  - layout: OBT
+    date: 2020-01-19
+    obt: Change is absolutely necessary for spiritual growth.
+    by: Daaji
+    question: What is absolutely necessary for spiritual growth?
+    color: green
