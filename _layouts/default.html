@@ -8,8 +8,11 @@
     <title>appsparkler</title>
   </head>
   <body>
-    {{content}}
 
+    <div class="container">
+      {% include navbar.html %}
+      {{content}}
+    </div>
     {%- include footlibs.html -%}
   </body>
 </html>
