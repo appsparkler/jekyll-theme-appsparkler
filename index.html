@@ -10,36 +10,20 @@ layout: home
 <div class="row">
   {% for x in site.data.obts %}
     {% for obt in x.obts %}
-    <div class="col s12 m6">
-      <div class="card z-depth-0 {{ obt.color}} white-text">
-        <div class="card-content">
-          <div class="card-title">
-            <h3>{{obt.question}}</h3>
-          </div>
-          <div class="card-body">
-            <p>{{ obt.obt }}</p>
+      <div class="col s12 m6">
+        <div class="card z-depth-0 {{ obt.color}}">
+          <div class="card-content">
+            <div class="card-title">
+              <h3>{{obt.question}}</h3>
+            </div>
+            <div class="card-body">
+              <blockquote cite="http://">
+                <p>{{ obt.obt }}</p>
+              </blockquote>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     {% endfor %}
-  {% endfor %}
-</div>
-
-
-<div class="row">
-  {% for obt in site.obts %}
-    <div class="col s12 m6">
-      <div class="card z-depth-0 {{ obt.color}} white-text">
-        <div class="card-content">
-          <div class="card-title">
-            <h3>{{ obt.question }}</h3>
-          </div>
-          <div class="card-body">
-            <p>{{ obt.obt }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
   {% endfor %}
 </div>
