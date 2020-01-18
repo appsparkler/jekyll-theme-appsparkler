@@ -2,6 +2,7 @@ const {resolve} = require('path')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const HTMLPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -32,6 +33,10 @@ module.exports = {
     ]},
   plugins: [
     new CleanWebpackPlugin(),
+    new CopyPlugin([
+      {from: 'src/img/',
+        to: 'img/'},
+    ]),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
