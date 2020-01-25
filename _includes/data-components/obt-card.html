@@ -1,0 +1,20 @@
+{% for x in include.obts %}
+  <h3 class="{{x.headingClass}}">{{ x.description }}</h3>
+  {% for obt in x.obts %}
+    <div class="{{ x.wrapperClass }}">
+      <div class="{{ x.cardClass }} {{ obt.color}}">
+        <div class="card-content">
+          <div class="card-title">
+            <h5>{{obt.question}}</h5>
+          </div>
+          <div class="card-body">
+            <blockquote cite="http://www.heartfulness.org">
+              <p>{{ obt.obt }}</p>
+              <p class="right">-{{ obt.by }}</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endfor %}

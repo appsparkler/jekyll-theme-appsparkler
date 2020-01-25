@@ -1,6 +1,15 @@
 - id: OBTs
   description: A collection of OBTs
+  wrapperClass: col s12 m9
+  cardClass: obt-card card z-depth-1
+  headingClass: blue-grey-text text-darken-2
   obts:
+  - layout: OBT
+    date: 2020-01-25
+    obt: We see shortcomings in others only at that time when those shortcomings are present in ourselves.
+    by: Laalaji
+    question: When do we see shortcomings in others?
+    color: pink white-text
   - layout: OBT
     date: 2020-01-15
     obt: Samadhi means the absolute state of balance, just like the one that existed before creation.

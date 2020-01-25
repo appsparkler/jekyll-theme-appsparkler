@@ -1,29 +1,7 @@
 ---
 layout: home
 ---
-<style>
-  .col {
-    height: 100% !important;
-  }
-</style>
 
 <div class="row">
-  {% for x in site.data.obts %}
-    {% for obt in x.obts %}
-      <div class="col s12 m6">
-        <div class="card z-depth-0 {{ obt.color}}">
-          <div class="card-content">
-            <div class="card-title">
-              <h3>{{obt.question}}</h3>
-            </div>
-            <div class="card-body">
-              <blockquote cite="http://">
-                <p>{{ obt.obt }}</p>
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
-    {% endfor %}
-  {% endfor %}
+  {% include data-components/obt-card.html obts=site.data.obts %}
 </div>
